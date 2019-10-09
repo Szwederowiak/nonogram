@@ -19,6 +19,7 @@ body {
   .empty {
     background: #00f;
   }
+
   .columns {
     background: #0f0;
     display: flex;
@@ -33,24 +34,38 @@ body {
     grid-gap: 1px;
     padding: 1px;
   }
+
   .row-label {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
   }
+
   .column-label {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
   }
+
   .row-label,
   .column-label {
     &__item {
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
+
+      &::after {
+        content: "";
+        height: 90%;
+        width: 90%;
+        top: 5%;
+        left: 5%;
+        border: solid 1px;
+        position: absolute;
+      }
     }
   }
 
@@ -59,6 +74,7 @@ body {
     background: #123;
     grid-gap: 1px;
     padding: 1px;
+
     .field {
       background: violet;
 

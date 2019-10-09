@@ -96,6 +96,18 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+}
+
+.board .row-label__item::after,
+.board .column-label__item::after {
+  content: "";
+  height: 90%;
+  width: 90%;
+  top: 5%;
+  left: 5%;
+  border: solid 1px;
+  position: absolute;
 }
 
 .board .playfield {
